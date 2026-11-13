@@ -46,10 +46,12 @@ document.querySelectorAll<HTMLDialogElement>("dialog").forEach((dialog) => {
 const qr = $<HTMLDialogElement>("#qr-dialog");
 document.querySelectorAll<HTMLElement>("[data-qr]").forEach((button) =>
   button.addEventListener("click", () => {
+    qr.classList.toggle("is-wide", button.dataset.wide === "true");
     $("#qr-title").textContent = button.dataset.title!;
     $<HTMLImageElement>("#qr-image").src = button.dataset.qr!;
     $<HTMLImageElement>("#qr-image").alt = `${button.dataset.title} 二维码`;
     $<HTMLAnchorElement>("#qr-download").href = button.dataset.qr!;
+    $<HTMLAnchorElement>("#qr-original").href = button.dataset.qr!;
     document.body.style.overflow = "hidden";
     qr.showModal();
   }),

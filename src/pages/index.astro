@@ -1,5 +1,7 @@
 ---
 import Shell from '../components/Shell.astro';
+import WorkCard from '../components/WorkCard.astro';
+import { works, workCategories } from '../data/works';
 import { readFileSync } from 'node:fs';
 const lorenzArtwork = readFileSync('public/media/lorenz-attractor.svg', 'utf8');
 import { documents, resources } from '../lib/content';
@@ -43,30 +45,17 @@ const picks = [
     </section>
 
     <section id="work" class="work-section section-pad">
-      <div class="section-heading reveal"><div><p class="eyebrow"><span class="orange-dot"></span> 01 / SELECTED WORK</p><h2 data-zh="一些想法，已经发生。" data-en="Thoughts, turned into things.">一些想法，已经发生。</h2></div><span class="section-side" data-zh="从一个念头，到一个可以打开的产品。" data-en="From a first thought to a product you can open.">从一个念头，到一个可以打开的产品。</span></div>
-      <div class="work-grid">
-        <article class="work-item reveal">
-          <button class="work-board purine-board" data-qr="/media/images/qrcode3.jpg" data-title="Purine Query Tool" aria-label="查看 Purine Query Tool 小程序码">
-            <span class="board-top">01 / WECHAT MINI PROGRAM</span>
-            <div class="purine-art"><span class="purine-letter">P<span class="letter-dot">.</span></span><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><span class="orbit orbit-three"></span><span class="orbit-node"></span></div>
-            <div class="board-bottom"><span>PURINE<br/>QUERY TOOL</span><span class="board-open">↗</span></div>
-          </button>
-          <div class="work-caption"><div><h3>Purine Query Tool</h3><p data-zh="嘌呤查询工具 · 微信小程序" data-en="Purine query tool · WeChat mini program">嘌呤查询工具 · 微信小程序</p></div><button class="qr-link" data-qr="/media/images/qrcode3.jpg" data-title="Purine Query Tool" data-zh="扫码体验 ↗" data-en="Open QR ↗">扫码体验 ↗</button></div>
-        </article>
-        <article class="work-item work-item-offset reveal">
-          <button class="work-board boyfriend-board" data-qr="/media/images/qrcode1.jpg" data-title="Choosing Boyfriend" aria-label="查看 Choosing Boyfriend 小程序码">
-            <span class="board-top">02 / WECHAT MINI PROGRAM</span>
-            <div class="heart-art" aria-hidden="true"><svg viewBox="0 0 360 300" fill="none"><path d="M180 252 54 135C-26 53 92-30 180 71 268-30 386 53 306 135Z" fill="#242126"/><path d="m180 252 6-179" stroke="#d7cbe6" stroke-width="1.2"/><path d="m54 135 252 0M82 51l98 201L278 51" stroke="#d7cbe6" stroke-width="1.2"/></svg><span class="heart-spark">✳</span></div>
-            <div class="board-bottom"><span>CHOOSING<br/>BOYFRIEND</span><span class="board-open">↗</span></div>
-          </button>
-          <div class="work-caption"><div><h3>Choosing Boyfriend</h3><p data-zh="个人作品 · 微信小程序" data-en="Personal project · WeChat mini program">个人作品 · 微信小程序</p></div><button class="qr-link" data-qr="/media/images/qrcode1.jpg" data-title="Choosing Boyfriend" data-zh="扫码体验 ↗" data-en="Open QR ↗">扫码体验 ↗</button></div>
-        </article>
+      <div class="section-heading reveal"><div><p class="eyebrow"><span class="orange-dot"></span> 01 / SELECTED WORK</p><h2 data-zh="一些想法，已经发生。" data-en="Thoughts, turned into things.">一些想法，已经发生。</h2></div><a href="/work/" class="collection-cta"><span data-zh="浏览全部作品" data-en="View all works">浏览全部作品</span><span class="collection-count">{String(works.length).padStart(2, '0')}</span><span class="collection-arrow" aria-hidden="true">↗</span></a></div>
+      <div class="portfolio-overview"><span data-zh={`首页精选 ${works.filter(work => work.featured).length} 件 / 完整作品 ${works.length} 件`} data-en={`${works.filter(work => work.featured).length} SELECTED / ${works.length} IN THE COLLECTION`}>首页精选 {works.filter(work => work.featured).length} 件 / 完整作品 {works.length} 件</span><nav aria-label="浏览全部作品分类">{workCategories.map(category => { const count = String(works.filter(work => work.category === category.id).length).padStart(2, '0'); return <a href={`/work/#${category.id}`} data-zh={`${category.title} ${count}`} data-en={`${category.englishTitle} ${count}`}>{category.title} {count}</a>; })}</nav></div>
+      <div class="homepage-portfolio">
+        {works.filter(work => work.featured).map((work, index) => <WorkCard work={work} number={works.indexOf(work) + 1} featured={index === 0} />)}
       </div>
+      <a class="portfolio-more" href="/work/"><div><span class="eyebrow">THE COMPLETE COLLECTION / {String(works.length).padStart(2, '0')}</span><strong data-zh={`还有 ${works.length - works.filter(work => work.featured).length} 件作品，继续探索。`} data-en={`${works.length - works.filter(work => work.featured).length} more works. Keep exploring.`}>还有 {works.length - works.filter(work => work.featured).length} 件作品，继续探索。</strong></div><span class="portfolio-more-action"><span data-zh="进入完整作品集" data-en="Explore the collection">进入完整作品集</span><span class="portfolio-more-arrow" aria-hidden="true">↗</span></span></a>
     </section>
 
     <section id="about" class="about-section section-pad">
       <div class="about-label reveal"><p class="eyebrow"><span class="orange-dot"></span> 02 / A LITTLE ABOUT ME</p><div class="portrait-wrap"><img src="/media/images/myphoto.jpg" width="300" height="300" alt="Lord Li 的个人照片" loading="lazy"/><span>Lord Li / PORTRAIT</span></div></div>
-      <div class="about-copy reveal"><h2><span data-zh="理解复杂，" data-en="Understand complexity.">理解复杂，</span><br/><span class="muted" data-zh="创造清晰。" data-en="Create clarity.">创造清晰。</span></h2><p class="about-intro" data-zh="我是一名产品与项目经理，长期在金融科技、互联网产品和技术实践的交汇处工作。" data-en="I’m a product and project manager, working at the intersection of financial technology, internet products and hands-on technology.">我是一名产品与项目经理，长期在金融科技、互联网产品和技术实践的交汇处工作。</p><p class="about-detail" data-zh="拥有近 20 年金融科技从业经验、12 年 IT 项目管理经验及 8 年互联网产品设计经验。PMP、PRINCE2 认证，阿尔伯塔大学金融管理硕士。" data-en="Almost 20 years in financial technology, 12 years in IT project management and 8 years in internet product design. PMP and PRINCE2 certified. Master of Financial Management, University of Alberta.">拥有近 20 年金融科技从业经验、12 年 IT 项目管理经验及 8 年互联网产品设计经验。PMP、PRINCE2 认证，阿尔伯塔大学金融管理硕士。</p><span class="archive-caption" data-zh="经历信息沿用旧站资料" data-en="Experience figures retained from the original site">经历信息沿用旧站资料</span><div class="about-links"><a href="/read/index/" class="text-link" data-zh="完整个人简介 ↗" data-en="More about me ↗">完整个人简介 ↗</a><a href="/read/about/skills/" class="text-link" data-zh="技能与能力 ↗" data-en="Skills & capabilities ↗">技能与能力 ↗</a></div></div>
+      <div class="about-copy reveal"><h2><span data-zh="理解复杂，" data-en="Understand complexity.">理解复杂，</span><br/><span class="muted" data-zh="创造清晰。" data-en="Create clarity.">创造清晰。</span></h2><p class="about-intro" data-zh="我是一名产品与项目经理，长期在金融科技、互联网产品和技术实践的交汇处工作。" data-en="I’m a product and project manager, working at the intersection of financial technology, internet products and hands-on technology.">我是一名产品与项目经理，长期在金融科技、互联网产品和技术实践的交汇处工作。</p><p class="about-detail" data-zh="拥有超过 20 年金融科技从业经验、12 年 IT 项目管理经验及 8 年互联网产品设计经验。PMP、PRINCE2 认证，阿尔伯塔大学金融管理硕士。" data-en="Almost 20 years in financial technology, 12 years in IT project management and 8 years in internet product design. PMP and PRINCE2 certified. Master of Financial Management, University of Alberta.">拥有超过 20 年金融科技从业经验、12 年 IT 项目管理经验及 8 年互联网产品设计经验。PMP、PRINCE2 认证，阿尔伯塔大学金融管理硕士。</p><span class="archive-caption" data-zh="经历信息沿用旧站资料" data-en="Experience figures retained from the original site">经历信息沿用旧站资料</span><div class="about-links"><a href="/read/index/" class="text-link" data-zh="完整个人简介 ↗" data-en="More about me ↗">完整个人简介 ↗</a><a href="/read/about/skills/" class="text-link" data-zh="技能与能力 ↗" data-en="Skills & capabilities ↗">技能与能力 ↗</a></div></div>
     </section>
 
     <section id="thinking" class="thinking-section section-pad">

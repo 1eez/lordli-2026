@@ -17,7 +17,7 @@ npm run preview -- --port 4321
 - 艺术展陈式首页、响应式样式、章节标题错峰显现及减少动态效果支持。
 - `lord Li` 原创 SVG 字标；精简版洛伦兹轨迹在进入页面时描绘一次，作品展板支持轻微悬停与键盘聚焦反馈。
 - 洛伦兹标题链接到维基百科；σ、ρ、β 滑块实时重绘，支持重置经典参数。收敛时显示稳定点，关闭 JavaScript 时仍保留静态图形和百科链接。
-- 六大栏目入口、现有两件作品的二维码查看与保存。
+- 六大栏目入口、首页精选与独立 `/work/` 作品集；10 件作品按小游戏、小程序、公众号排列，支持二维码放大、保存和查看原图。
 - 首页中英文文案切换；31 篇文章、4 个个人资料页面保留旧站原文语言。
 - 7 篇乐理文章阅读页及 `/data/v1/music-theory/` 静态 JSON 输出。
 - Pagefind 全文搜索、`⌘K / Ctrl+K`、移动端导航。
@@ -28,6 +28,10 @@ npm run preview -- --port 4321
 ## 主要文件
 
 - `src/pages/index.astro`：首页内容与布局。
+- `src/pages/work.astro`：完整作品集页面，分类及数量随作品清单更新。
+- `src/data/works.ts`：作品清单、类别、顺序、首页精选及可选的中英文简介。
+- `src/components/WorkCard.astro`：首页和作品页共用的二维码作品展板。
+- `src/styles/portfolio.css`：作品区、作品集页面和宽幅二维码弹窗样式。
 - `src/styles/global.css`：视觉变量、版式、响应式和动效。
 - `src/lib/interactions.ts`：搜索、二维码、语言切换与菜单。
 - `src/lib/content.ts`：原始 Markdown 的构建时读取与渲染。

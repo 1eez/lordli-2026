@@ -1,0 +1,23 @@
+---
+import type { Work } from '../data/works';
+import { workCategories } from '../data/works';
+interface Props { work: Work; number: number; featured?: boolean; }
+const { work, number, featured = false } = Astro.props;
+const category = workCategories.find(category => category.id === work.category)!;
+---
+<article class:list={['portfolio-card', 'reveal', { 'portfolio-card-featured': featured, 'portfolio-card-account': work.category === 'account' }]} id={`work-${work.id}`}>
+  <div class="portfolio-card-top"><span class="portfolio-number">{String(number).padStart(2, '0')}</span><span>{category.label}</span></div>
+  <div class="portfolio-card-body">
+    <div class="portfolio-card-copy">
+      <p class="portfolio-category"><span class="portfolio-category-dot" aria-hidden="true"></span><span data-zh={category.title} data-en={category.englishTitle}>{category.title}</span></p>
+      <h3>{work.title}</h3>
+      <p class="portfolio-english">{work.englishTitle}</p>
+      {work.description && <p class="portfolio-description" data-zh={work.description} data-en={work.englishDescription ?? work.description}>{work.description}</p>}
+    </div>
+    <button class="portfolio-qr" data-qr={work.qr} data-title={work.title} data-wide={work.category === 'account' ? 'true' : undefined} aria-label={`放大${work.title}二维码`}>
+      <img src={work.qr} alt={`${work.title}${work.category === 'account' ? '公众号二维码' : work.category === 'game' ? '微信小游戏码' : '微信小程序码'}`} width={work.category === 'account' ? 1710 : 430} height={work.category === 'account' ? 624 : 430} loading="lazy" />
+      <span class="portfolio-qr-caption" data-zh="点击放大 ↗" data-en="Enlarge ↗">点击放大 ↗</span>
+    </button>
+  </div>
+  <div class="portfolio-card-bottom"><span data-zh="微信扫码 / 保存后识别" data-en="Scan with WeChat / Save to recognize">微信扫码 / 保存后识别</span><button class="qr-link" data-qr={work.qr} data-title={work.title} data-wide={work.category === 'account' ? 'true' : undefined} data-zh={work.category === 'account' ? '关注公众号 ↗' : '扫码体验 ↗'} data-en={work.category === 'account' ? 'Follow ↗' : 'Open QR ↗'}>{work.category === 'account' ? '关注公众号 ↗' : '扫码体验 ↗'}</button></div>
+</article>

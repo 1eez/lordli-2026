@@ -1,0 +1,25 @@
+---
+import Shell from '../components/Shell.astro';
+import WorkCard from '../components/WorkCard.astro';
+import { works, workCategories } from '../data/works';
+---
+<Shell title="个人作品集 — Lord Li" description="Lord Li 的小游戏、小程序与公众号作品总览。">
+  <main id="main" class="portfolio-page section-pad" data-pagefind-body>
+    <div class="portfolio-intro">
+      <a href="/#work" class="text-link" data-zh="← 返回首页" data-en="← Back home">← 返回首页</a>
+      <p class="eyebrow"><span class="orange-dot"></span> WORK / AN ONGOING COLLECTION</p>
+      <div class="portfolio-title-row"><h1 data-zh="让想法，有迹可循。" data-en="Ideas, made tangible.">让想法，有迹可循。</h1><span class="portfolio-total">{String(works.length).padStart(2, '0')}<small data-zh="件作品，持续创造中" data-en="works, and counting">件作品，持续创造中</small></span></div>
+      <p class="portfolio-intro-note" data-zh="小游戏、小程序与文字。点击二维码放大，或保存到微信中识别。" data-en="Games, mini programs and writing. Enlarge a code, or save it to recognize in WeChat.">小游戏、小程序与文字。点击二维码放大，或保存到微信中识别。</p>
+    </div>
+    <nav class="portfolio-categories" aria-label="作品分类">
+      {workCategories.map(category => <a href={`#${category.id}`}><span data-zh={category.title} data-en={category.englishTitle}>{category.title}</span><span>{String(works.filter(work => work.category === category.id).length).padStart(2, '0')}</span></a>)}
+    </nav>
+    {workCategories.map((category, index) => <section class="portfolio-group" id={category.id}>
+      <div class="portfolio-group-heading"><p class="eyebrow">0{index + 1} / {category.label}</p><h2 data-zh={category.title} data-en={category.englishTitle}>{category.title}</h2></div>
+      <div class:list={['portfolio-grid', { 'portfolio-grid-single': category.id !== 'miniapp' }]}>
+        {works.filter(work => work.category === category.id).map(work => <WorkCard work={work} number={works.indexOf(work) + 1} featured={category.id === 'game'} />)}
+      </div>
+    </section>)}
+    <div class="portfolio-outro"><span data-zh="下一件作品，正在路上。" data-en="The next idea is on its way.">下一件作品，正在路上。</span><a class="text-link" href="mailto:cnpro@163.com" data-zh="联系我 ↗" data-en="Get in touch ↗">联系我 ↗</a></div>
+  </main>
+</Shell>
