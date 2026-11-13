@@ -877,10 +877,10 @@ summary {
   gap: 28px;
   font-size: 11px;
 }
-.contact-bottom > a {
+.contact-bottom > .contact-email {
   font: 12px var(--display);
 }
-.contact-bottom > span {
+.contact-bottom > span:last-child {
   margin-left: auto;
   font-size: 11px;
 }
@@ -1693,13 +1693,13 @@ dialog::backdrop {
     padding-top: 20px;
     gap: 15px 25px;
   }
-  .contact-bottom > a {
+  .contact-bottom > .contact-email {
     font-size: 11px;
   }
   .contact-bottom > .qr-link {
     font-size: 10px;
   }
-  .contact-bottom > span {
+  .contact-bottom > span:last-child {
     width: 100%;
     margin: 2px 0 0;
     font-size: 10px;
