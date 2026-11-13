@@ -15,7 +15,7 @@ npm run preview -- --port 4321
 ## 已实现
 
 - 艺术展陈式首页、响应式样式、章节标题错峰显现及减少动态效果支持。
-- `lord Li` 原创 SVG 字标；稀疏洛伦兹轨迹在进入页面时描绘一次，作品展板支持轻微悬停与键盘聚焦反馈。
+- `lord Li` 原创 SVG 字标；精简版洛伦兹轨迹在进入页面时描绘一次，作品展板支持轻微悬停与键盘聚焦反馈。
 - 六大栏目入口、现有两件作品的二维码查看与保存。
 - 首页中英文文案切换；31 篇文章、4 个个人资料页面保留旧站原文语言。
 - 7 篇乐理文章阅读页及 `/data/v1/music-theory/` 静态 JSON 输出。
@@ -32,7 +32,7 @@ npm run preview -- --port 4321
 - `src/lib/content.ts`：原始 Markdown 的构建时读取与渲染。
 - `src/content/articles/`：35 个迁入项目的 Markdown 内容文件，不依赖原备份仓库。
 - `src/components/Wordmark.astro`：原创小写 SVG 字标。
-- `scripts/generate-lorenz.mjs`：使用 RK4 积分生成洛伦兹吸引子 SVG，运行 `node scripts/generate-lorenz.mjs` 可重新生成。
+- `scripts/generate-lorenz.mjs`：使用 RK4 积分生成精简版洛伦兹吸引子，运行 `node scripts/generate-lorenz.mjs` 可重新生成 SVG。
 - `src/data/music.json`：参考小程序文件取得的乐理内容快照，网页与 JSON 保持同源更新。
 - `public/fonts/`：本地托管字体与 OFL 授权说明。
 

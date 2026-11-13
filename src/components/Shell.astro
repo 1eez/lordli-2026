@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import Wordmark from './Wordmark.astro';
-const { title = 'lord Li — 思考、创造与实践', description = 'lord Li 的个人空间。探索产品理念、项目管理、编程实践与个人作品。' } = Astro.props;
+const { title = 'Lord Li — 思考、创造与实践', description = 'Lord Li 的个人空间。探索产品理念、项目管理、编程实践与个人作品。' } = Astro.props;
 ---
 <!doctype html>
 <html lang="zh-CN">
@@ -17,7 +17,7 @@ const { title = 'lord Li — 思考、创造与实践', description = 'lord Li �
   <body>
     <a class="skip-link" href="#main">跳至正文</a>
     <header class="site-header">
-      <a href="/" class="wordmark" aria-label="lord Li 首页"><Wordmark /></a>
+      <a href="/" class="wordmark" aria-label="Lord Li 首页"><Wordmark /></a>
       <nav id="navigation" aria-label="主导航">
         <a href="/#about" data-zh="关于我" data-en="About">关于我</a>
         <a href="/#work" data-zh="作品" data-en="Work">作品</a>
@@ -34,8 +34,8 @@ const { title = 'lord Li — 思考、创造与实践', description = 'lord Li �
     </header>
     <slot />
     <footer class="site-footer">
-      <a class="wordmark" href="/" aria-label="lord Li 首页"><Wordmark /></a>
-      <p>© {new Date().getFullYear()} lord Li</p>
+      <a class="wordmark" href="/" aria-label="Lord Li 首页"><Wordmark /></a>
+      <p>© {new Date().getFullYear()} Lord Li</p>
       <a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">粤ICP备16037781号</a>
       <a href="#" class="back-top" data-zh="回到顶部 ↑" data-en="Back to top ↑">回到顶部 ↑</a>
     </footer>

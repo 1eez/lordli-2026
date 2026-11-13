@@ -1,4 +1,4 @@
-<font size="8">lord Li</font>
+<font size="8">Lord Li</font>
 # My Skills List
 
 ## ▻ Product Design

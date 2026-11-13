@@ -15,17 +15,28 @@ const picks = [
 <Shell>
   <main id="main" data-pagefind-body>
     <section class="hero section-pad">
-      <div class="hero-topline"><span class="eyebrow">THE PERSONAL SPACE OF lord Li</span><span class="edition">THINK / BUILD / SHARE</span></div>
+      <div class="hero-topline"><span class="eyebrow">THE PERSONAL SPACE OF Lord Li</span><span class="edition">THINK / BUILD / SHARE</span></div>
       <div class="hero-grid">
         <div class="hero-copy">
           <h1><span data-zh="让想法" data-en="Ideas made">让想法</span><br/><span class="hero-last" data-zh="真实发生" data-en="real">真实发生</span><span class="title-asterisk" aria-hidden="true">✳</span></h1>
           <div class="hero-bottom"><span class="hero-index">01 — 06</span><div><p class="hero-description" data-zh="在产品、项目与代码之间，\n把思考变成值得创造的事物。" data-en="At the intersection of product, projects and code,\nturning thought into things worth building.">在产品、项目与代码之间，<br/>把思考变成值得创造的事物。</p><a href="#work" class="pill-link"><span data-zh="探索我的作品" data-en="Explore my work">探索我的作品</span><span class="round-arrow">↗</span></a></div></div>
         </div>
-        <div class="hero-art" aria-label="朱橙色洛伦兹吸引子：由非线性动力系统轨迹构成的双翼结构" role="img">
+        <div class="hero-visual">
+        <div class="hero-art" aria-label="洛伦兹吸引子交互图形" role="group">
           <div class="art-corner corner-tl"></div><div class="art-corner corner-tr"></div><div class="art-corner corner-bl"></div><div class="art-corner corner-br"></div>
-          <span class="art-label">LORENZ ATTRACTOR</span>
+          <a class="art-label" href="https://en.wikipedia.org/wiki/Lorenz_system" target="_blank" rel="noopener noreferrer" aria-label="在维基百科了解洛伦兹系统（新窗口打开）">LORENZ ATTRACTOR ↗</a>
           <div class="sculpture-wrap" set:html={lorenzArtwork} />
           <span class="art-coordinate">σ = 10 · ρ = 28 · β = 8/3</span><span class="art-plus">+</span>
+        </div>
+        <form class="lorenz-controls" hidden aria-label="洛伦兹参数调节" data-pagefind-ignore>
+          <div class="lorenz-control-heading"><span data-zh="探索混沌" data-en="EXPLORE CHAOS">探索混沌</span><button type="reset" data-zh="重置 ↺" data-en="Reset ↺">重置 ↺</button></div>
+          <div class="lorenz-sliders">
+            <label for="lorenz-sigma"><span>σ <output for="lorenz-sigma">10</output></span><input id="lorenz-sigma" name="sigma" type="range" min="1" max="30" step="0.1" value="10" aria-label="Sigma" /></label>
+            <label for="lorenz-rho"><span>ρ <output for="lorenz-rho">28</output></span><input id="lorenz-rho" name="rho" type="range" min="0" max="100" step="0.5" value="28" aria-label="Rho" /></label>
+            <label for="lorenz-beta"><span>β <output for="lorenz-beta">8/3</output></span><input id="lorenz-beta" name="beta" type="range" min="0.5" max="6" step="any" value={8 / 3} aria-label="Beta" /></label>
+          </div>
+          <p class="lorenz-status" role="status" data-zh="拖动参数，观察轨迹如何变化。" data-en="Drag a parameter to explore the trajectory.">拖动参数，观察轨迹如何变化。</p>
+        </form>
         </div>
       </div>
       <div class="hero-foot"><span>PRODUCT & PROJECT MANAGER</span><a href="#work" data-zh="向下探索 ↓" data-en="SCROLL TO EXPLORE ↓">向下探索 ↓</a></div>
@@ -54,7 +65,7 @@ const picks = [
     </section>
 
     <section id="about" class="about-section section-pad">
-      <div class="about-label reveal"><p class="eyebrow"><span class="orange-dot"></span> 02 / A LITTLE ABOUT ME</p><div class="portrait-wrap"><img src="/media/images/myphoto.jpg" width="300" height="300" alt="lord Li 的个人照片" loading="lazy"/><span>lord Li / PORTRAIT</span></div></div>
+      <div class="about-label reveal"><p class="eyebrow"><span class="orange-dot"></span> 02 / A LITTLE ABOUT ME</p><div class="portrait-wrap"><img src="/media/images/myphoto.jpg" width="300" height="300" alt="Lord Li 的个人照片" loading="lazy"/><span>Lord Li / PORTRAIT</span></div></div>
       <div class="about-copy reveal"><h2><span data-zh="理解复杂，" data-en="Understand complexity.">理解复杂，</span><br/><span class="muted" data-zh="创造清晰。" data-en="Create clarity.">创造清晰。</span></h2><p class="about-intro" data-zh="我是一名产品与项目经理，长期在金融科技、互联网产品和技术实践的交汇处工作。" data-en="I’m a product and project manager, working at the intersection of financial technology, internet products and hands-on technology.">我是一名产品与项目经理，长期在金融科技、互联网产品和技术实践的交汇处工作。</p><p class="about-detail" data-zh="拥有近 20 年金融科技从业经验、12 年 IT 项目管理经验及 8 年互联网产品设计经验。PMP、PRINCE2 认证，阿尔伯塔大学金融管理硕士。" data-en="Almost 20 years in financial technology, 12 years in IT project management and 8 years in internet product design. PMP and PRINCE2 certified. Master of Financial Management, University of Alberta.">拥有近 20 年金融科技从业经验、12 年 IT 项目管理经验及 8 年互联网产品设计经验。PMP、PRINCE2 认证，阿尔伯塔大学金融管理硕士。</p><span class="archive-caption" data-zh="经历信息沿用旧站资料" data-en="Experience figures retained from the original site">经历信息沿用旧站资料</span><div class="about-links"><a href="/read/index/" class="text-link" data-zh="完整个人简介 ↗" data-en="More about me ↗">完整个人简介 ↗</a><a href="/read/about/skills/" class="text-link" data-zh="技能与能力 ↗" data-en="Skills & capabilities ↗">技能与能力 ↗</a></div></div>
     </section>
 
@@ -76,3 +87,7 @@ const picks = [
     <section class="contact-section section-pad"><div class="contact-top reveal"><p class="eyebrow">A CONVERSATION STARTS SOMETHING.</p><a href="https://github.com/1eez" target="_blank" rel="noreferrer">GITHUB ↗</a></div><a class="contact-title reveal" href="mailto:cnpro@163.com"><span data-zh="聊聊新的可能。" data-en="Let’s talk possibilities.">聊聊新的可能。</span><span class="contact-arrow">↗</span></a><div class="contact-bottom"><a href="mailto:cnpro@163.com">CNPRO@163.COM</a><button class="qr-link" data-qr="/media/images/myqrcode.png" data-title="WeChat / 微信" data-zh="微信联系 ↗" data-en="Connect on WeChat ↗">微信联系 ↗</button><span data-zh="保持好奇，持续创造。" data-en="Stay curious. Keep creating.">保持好奇，持续创造。</span></div></section>
   </main>
 </Shell>
+
+<script>
+  import '../lib/lorenz-controls';
+</script>

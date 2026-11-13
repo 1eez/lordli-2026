@@ -1,4 +1,4 @@
-<font size="8">lord Li</font>
+<font size="8">Lord Li</font>
 # Please contact me by the following
 
 ## E-mail
