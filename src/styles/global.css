@@ -368,6 +368,7 @@ summary {
   inset: -24px -25px -18px;
   display: grid;
   place-items: center;
+  pointer-events: none;
 }
 .sculpture {
   width: 100%;
@@ -387,6 +388,63 @@ summary {
   font-size: 9px;
   color: var(--muted);
   z-index: 1;
+}
+.art-label:hover {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.lorenz-controls {
+  border-top: 1px solid var(--line);
+  margin-top: 18px;
+  padding: 14px 0 0;
+}
+.lorenz-controls[hidden] { display: none; }
+.lorenz-control-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: .06em;
+}
+.lorenz-control-heading button {
+  padding: 5px 0 5px 14px;
+  font-size: 10px;
+  color: var(--ink);
+}
+.lorenz-sliders {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 10px;
+}
+.lorenz-sliders label > span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  font: 13px var(--display);
+}
+.lorenz-sliders output {
+  font-size: 10px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.lorenz-sliders input {
+  display: block;
+  width: 100%;
+  height: 26px;
+  margin: 5px 0 0;
+  accent-color: var(--orange);
+  cursor: ew-resize;
+}
+.lorenz-status {
+  font-size: 9px;
+  line-height: 1.7;
+  color: var(--muted);
+  min-height: 16px;
+  margin: 6px 0 12px;
 }
 .art-coordinate {
   position: absolute;

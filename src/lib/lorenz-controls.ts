@@ -10,10 +10,15 @@ if (controls) {
   const status = controls.querySelector<HTMLElement>('.lorenz-status')!;
   const sliders = [...controls.querySelectorAll<HTMLInputElement>('input[type="range"]')];
   const parameters = { ...defaultParameters };
-  let timer: ReturnType<typeof setTimeout>;
+  let timer: ReturnType<typeof setTimeout> | undefined;
   const format = (value: number) => String(Number(value.toFixed(2)));
   const betaLabel = () => parameters.beta === defaultParameters.beta ? '8/3' : format(parameters.beta);
   const english = () => document.documentElement.lang === 'en';
+  function setStatus(zh: string, en: string) {
+    status.dataset.zh = zh;
+    status.dataset.en = en;
+    status.textContent = english() ? en : zh;
+  }
   function updateLabels() {
     for (const slider of sliders) {
       const key = slider.name as keyof typeof parameters;
@@ -26,7 +31,7 @@ if (controls) {
   function redraw() {
     const result = createLorenzPath(parameters);
     if (!result) {
-      status.textContent = english() ? 'Trajectory out of range. Try resetting.' : '轨迹超出范围，请调整参数或重置。';
+      setStatus('轨迹超出范围，请调整参数或重置。', 'Trajectory out of range. Try resetting.');
       path.style.visibility = 'hidden';
       marker.style.display = 'none';
       return;
@@ -36,22 +41,23 @@ if (controls) {
     path.setAttribute('d', result.path);
     marker.style.display = result.stationary ? '' : 'none';
     description.textContent = `Lorenz trajectory: sigma=${parameters.sigma}, rho=${parameters.rho}, beta=${parameters.beta}.`;
-    status.textContent = result.stationary
-      ? english() ? 'Trajectory approaches a steady point.' : '当前轨迹接近稳定点。'
-      : english() ? 'Drag a parameter to explore the trajectory.' : '拖动参数，观察轨迹如何变化。';
+    if (result.stationary) setStatus('当前轨迹接近稳定点。', 'Trajectory approaches a steady point.');
+    else setStatus('拖动参数，观察轨迹如何变化。', 'Drag a parameter to explore the trajectory.');
   }
   for (const slider of sliders) {
     slider.addEventListener('input', () => {
       parameters[slider.name as keyof typeof parameters] = Number(slider.value);
       updateLabels();
-      clearTimeout(timer);
-      timer = setTimeout(redraw, 65);
+      if (timer === undefined) {
+        timer = setTimeout(() => { timer = undefined; redraw(); }, 40);
+      }
     });
-    slider.addEventListener('change', () => { clearTimeout(timer); redraw(); });
+    slider.addEventListener('change', () => { clearTimeout(timer); timer = undefined; redraw(); });
   }
   controls.addEventListener('reset', event => {
     event.preventDefault();
     clearTimeout(timer);
+    timer = undefined;
     Object.assign(parameters, defaultParameters);
     for (const slider of sliders) slider.value = String(parameters[slider.name as keyof typeof parameters]);
     updateLabels();
