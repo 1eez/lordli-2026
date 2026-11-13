@@ -1,0 +1,18 @@
+---
+import Shell from '../../components/Shell.astro';
+import { allDocuments } from '../../lib/content';
+export function getStaticPaths() {
+  return allDocuments.map(document => ({ params: { slug: document.slug }, props: { document } }));
+}
+const { document } = Astro.props;
+---
+<Shell title={`${document.title} — lord Li`}>
+  <main id="main" class="reading-page" data-pagefind-body>
+    <a href="/" class="text-link">← 返回首页</a>
+    <div class="article-meta"><span>{document.category}</span><span>FROM THE ARCHIVE</span></div>
+    <h1>{document.title}</h1>
+    <p class="original-note">旧站原文 · 保留原始内容与语言</p>
+    <article class="prose" set:html={document.html} />
+    <a class="text-link article-end" href="/#thinking">继续探索 ↗</a>
+  </main>
+</Shell>

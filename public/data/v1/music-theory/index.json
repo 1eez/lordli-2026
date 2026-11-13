@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "staff-landmarks",
+      "title": "五线谱别爬楼梯，先装几个路标",
+      "description": "每次都从 Do 往上数，当然慢。试试就近认亲。",
+      "locale": "zh",
+      "url": "/data/v1/music-theory/staff-landmarks.zh.json"
+    },
+    {
+      "id": "chord-blocks",
+      "title": "大、小、减、增：和弦是两块积木",
+      "description": "四种三和弦，不背四套音，只记 3 和 4 怎么叠。",
+      "locale": "zh",
+      "url": "/data/v1/music-theory/chord-blocks.zh.json"
+    },
+    {
+      "id": "moving-third",
+      "title": "大三变小三，只动中间那个音",
+      "description": "两边站住，中间往下挪一格，听听味道怎么变。",
+      "locale": "zh",
+      "url": "/data/v1/music-theory/moving-third.zh.json"
+    },
+    {
+      "id": "interval-id",
+      "title": "音程有两张身份证，别只查半音数",
+      "description": "琴键位置一样，音程名字也可能不一样。",
+      "locale": "zh",
+      "url": "/data/v1/music-theory/interval-id.zh.json"
+    },
+    {
+      "id": "fourth-fifth",
+      "title": "四度、五度老打架？凑成一个八度",
+      "description": "5 和 7 是搭子，加起来刚好走完 12 格。",
+      "locale": "zh",
+      "url": "/data/v1/music-theory/fourth-fifth.zh.json"
+    },
+    {
+      "id": "twelve-steps",
+      "title": "十二平均律：八度一圈，半音一格",
+      "description": "“平均”的是倍率，可不是每格增加一样多的 Hz。",
+      "locale": "zh",
+      "url": "/data/v1/music-theory/twelve-steps.zh.json"
+    },
+    {
+      "id": "reference-anchor",
+      "title": "听音别裸猜，先给耳朵放一个路标",
+      "description": "参考音像尺子的零点，先有坐标，再缩小范围。",
+      "locale": "zh",
+      "url": "/data/v1/music-theory/reference-anchor.zh.json"
+    }
+  ]
+}
