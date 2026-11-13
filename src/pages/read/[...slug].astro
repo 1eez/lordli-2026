@@ -5,14 +5,20 @@ export function getStaticPaths() {
   return allDocuments.map(document => ({ params: { slug: document.slug }, props: { document } }));
 }
 const { document } = Astro.props;
+const englishTitle = ({ index: 'Personal Profile', 'about/skills': 'My Skills List' } as Record<string, string>)[document.slug];
+const profileTitles: Record<string, string> = {
+  index: '产品经理与项目经理个人履历：AI 应用、金融科技',
+  'about/skills': 'AI 应用与产品探索能力：提示设计、原型验证、工作流',
+};
+const description = document.html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 150);
 ---
-<Shell title={`${document.title} — Lord Li`}>
+<Shell title={`${profileTitles[document.slug] || document.title} — Lord Li`} description={`${document.title}：${description}`}>
   <main id="main" class="reading-page" data-pagefind-body>
-    <a href="/" class="text-link">← 返回首页</a>
-    <div class="article-meta"><span>{document.category}</span><span>FROM THE ARCHIVE</span></div>
-    <h1>{document.title}</h1>
-    <p class="original-note">旧站原文 · 保留原始内容与语言</p>
+    <a href="/" class="text-link" data-zh="← 返回首页" data-en="← Back to home">← 返回首页</a>
+    <div class="article-meta"><span data-zh={englishTitle ? document.category : undefined} data-en={englishTitle ? 'About me' : undefined}>{document.category}</span><span>{englishTitle ? 'PROFILE / Lord Li' : 'FROM THE ARCHIVE'}</span></div>
+    <h1 data-zh={englishTitle ? document.title : undefined} data-en={englishTitle}>{document.title}</h1>
+    {englishTitle ? <p class="original-note" data-zh="关于 AI、产品与实践" data-en="AI, product & practice">关于 AI、产品与实践</p> : <p class="original-note">旧站原文 · 保留原始内容与语言</p>}
     <article class="prose" set:html={document.html} />
-    <a class="text-link article-end" href="/#thinking">继续探索 ↗</a>
+    <a class="text-link article-end" href="/#thinking" data-zh="继续探索 ↗" data-en="Keep exploring ↗">继续探索 ↗</a>
   </main>
 </Shell>

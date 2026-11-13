@@ -3,7 +3,7 @@
 
 ## E-mail
 
- [cnPro@163.com](mailto:cnpro@163.com)
+ [cnpro@163.com](mailto:cnpro@163.com)
 
 ## Github
 
@@ -11,4 +11,4 @@
 
 ## Wechat
 
-![photo](../images/myqrcode.png "My Wechat QR Code")
+![photo](../images/wechat-personal.jpg "My Wechat QR Code")

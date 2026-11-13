@@ -24,7 +24,7 @@ $("#locale-toggle").addEventListener("click", () => {
     `${locale === "zh" ? "EN" : "中文"} <span>↗</span>`;
   $("#locale-toggle").setAttribute(
     "aria-label",
-    locale === "zh" ? "Switch homepage to English" : "切换首页为中文",
+    locale === "zh" ? "Switch to English" : "切换为中文",
   );
   $<HTMLInputElement>("#site-search").placeholder =
     locale === "zh"

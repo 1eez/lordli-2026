@@ -23,7 +23,9 @@ npm run preview -- --port 4321
 - Pagefind 全文搜索、`⌘K / Ctrl+K`、移动端导航。
 - 正式文章位于 `src/content/articles/`，发布产物仅位于 `dist/`。
 
-当前阅读页是首页入口的基础配套。完整双语文章、正式语言 URL、最终 SEO 元数据、站点地图和旧链接重定向按设计方案后续实施。预览页面暂设 `noindex, nofollow`，正式发布前需按生产域名配置替换。
+构建后每页 HTML 内联全部页面 CSS，减少弱网下额外样式请求；图片、字体、脚本及搜索索引保留独立文件与缓存。部署时仍需上传完整 `dist/`，不能只上传首页 HTML。
+
+SEO 已按生产域名 `https://lordli.com` 开放收录，提供页面独立标题与摘要、canonical、Open Graph、首页 Person 结构化数据，以及自动包含所有阅读页的 `/sitemap.xml` 和 `/robots.txt`。首页及履历侧重 AI 应用、金融科技、产品经理与项目经理的岗位搜索意图。正式上线后向百度搜索资源平台、Google Search Console 提交站点地图，并检查服务器无 `X-Robots-Tag: noindex`。完整双语文章、正式语言 URL 和旧链接重定向仍待后续实施。
 
 ## 主要文件
 

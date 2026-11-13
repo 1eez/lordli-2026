@@ -850,6 +850,8 @@ summary {
   font-size: 10px;
 }
 .contact-title {
+  width: 100%;
+  text-align: left;
   display: flex;
   align-items: center;
   justify-content: space-between;
