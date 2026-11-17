@@ -1,7 +1,26 @@
 import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { marked } from "marked";
-import music from "../data/music.json";
+import musicIndex from "../../public/data/v1/music-theory/index.json";
+
+interface MusicArticle {
+  id: string;
+  title: string;
+  description: string;
+  hook: string;
+  sections: { title: string; text: string }[];
+  mantra: string;
+  boundary: string;
+  examples: { label: string; spellings: string[]; caption: string }[];
+  quiz: { question: string; answers: string[]; explanation: string };
+}
+
+const music = musicIndex.items.map((item) => {
+  const { article } = JSON.parse(
+    readFileSync(join(process.cwd(), "public", item.url), "utf8"),
+  ) as { article: MusicArticle };
+  return article;
+});
 
 const root = join(process.cwd(), "src/content/articles");
 function walk(dir: string): string[] {

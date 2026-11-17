@@ -21,7 +21,7 @@ npm run preview -- --port 4321
 - 洛伦兹标题链接到维基百科；σ、ρ、β 滑块实时重绘，支持重置经典参数。收敛时显示稳定点，关闭 JavaScript 时仍保留静态图形和百科链接。
 - 六大栏目入口、首页精选与独立 `/work/` 作品集；10 件作品按小游戏、小程序、公众号排列，支持二维码放大、保存和查看原图。
 - 首页中英文文案切换；31 篇文章、4 个个人资料页面保留旧站原文语言。
-- 7 篇乐理文章阅读页及 `/data/v1/music-theory/` 静态 JSON 输出。
+- 乐理文章阅读页、首页目录与数量、搜索索引均由 `/data/v1/music-theory/` 的 JSON 数据在构建时生成。
 - Pagefind 全文搜索、`⌘K / Ctrl+K`、移动端导航。
 - 正式文章位于 `src/content/articles/`，发布产物仅位于 `dist/`。
 
@@ -44,9 +44,10 @@ SEO 已按生产域名 `https://lordli.com` 开放收录，提供页面独立标
 - `scripts/generate-lorenz.mjs`：使用 RK4 积分生成精简版洛伦兹吸引子，运行 `node scripts/generate-lorenz.mjs` 可重新生成 SVG。
 - `src/lib/lorenz.mjs`：构建与浏览器共用的 RK4 求解、轨迹投影及稳定点判断。
 - `src/lib/lorenz-controls.ts`：参数滑块、数值显示、限频重绘与重置。
-- `src/data/music.json`：参考小程序文件取得的乐理内容快照，网页与 JSON 保持同源更新。
+- `public/data/v1/music-theory/index.json`：乐理文章清单与展示顺序；同目录的 `*.zh.json` 提供文章正文。
+- `src/data/music.json`：早期导入快照，网页已不再读取。
 - `public/fonts/`：本地托管字体与 OFL 授权说明。
 
-乐理内容当前为一次性导入快照。后续确定内容维护方案后，再接入构建时统一导出流程；现有小程序没有改动。
+维护乐理文章时，将正文 JSON 放入 `public/data/v1/music-theory/`，并在该目录的 `index.json` 中添加对应条目（`id`、`title`、`description`、`locale`、`url`）。网页按索引顺序展示，标题与正文读取文章 JSON。无需修改首页 section 或手动填写篇数；执行 `npm run build` 后上传完整 `dist/`，即可同步更新目录、数量、阅读页、站点地图和全文搜索。仅上传 JSON 不会更新已生成的静态网页。
 
 原站文章来源：`1eez/2023_SouceCode_Backup` 的 `MkDocs/lordsite/docs`，提交 `cabc9683df6aa3365068cf0b45c6d4f049a4ea43`。所需文章与图片均已迁入正式内容和素材目录；临时下载目录已清理。
