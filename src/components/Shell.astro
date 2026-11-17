@@ -55,7 +55,7 @@ const profile = {
     <slot />
     <footer class="site-footer">
       <a class="wordmark" href="/" aria-label="Lord Li 首页"><Wordmark /></a>
-      <p>© {new Date().getFullYear()} Lord Li</p>
+      <p>© <span id="copyright-year">{new Date().getFullYear()}</span> Lord Li</p>
       <a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">粤ICP备16037781号</a>
       <a href="#" class="back-top" data-zh="回到顶部 ↑" data-en="Back to top ↑">回到顶部 ↑</a>
     </footer>

@@ -1,5 +1,6 @@
 const $ = <T extends Element = HTMLElement>(selector: string) =>
   document.querySelector<T>(selector)!;
+$("#copyright-year").textContent = String(new Date().getFullYear());
 const menu = $(".menu-toggle");
 menu.addEventListener("click", () => {
   const open = menu.getAttribute("aria-expanded") !== "true";
