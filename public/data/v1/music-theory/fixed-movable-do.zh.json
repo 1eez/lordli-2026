@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "locale": "zh",
+  "article": {
+    "id": "fixed-movable-do",
+    "tag": "唱名",
+    "title": "Do 不一定是 C：先问固定唱名，还是首调唱名",
+    "description": "同一段音用两种方法叫名字，就能理解为什么 D 也能唱 Do。",
+    "hook": "有人说 C 就是 Do，老师却让你把 D 唱成 Do。到底谁说错了？可能只是你们用的唱名方法不同。",
+    "sections": [
+      {
+        "title": "固定唱名给音名配唱词",
+        "text": "固定唱名下，自然音 C D E F G A B 对应 Do Re Mi Fa Sol La Si，不因换调而改变。比如 D4 E4 F♯4 G4，固定唱名按音名可读作 Re、Mi、升 Fa、Sol；“升”提醒你这个 Fa 比自然 F 高半音。"
+      },
+      {
+        "title": "首调唱名给调内位置配唱词",
+        "text": "在本篇的大调首调唱名里，主音唱 Do，音阶第二级唱 Re，第三级唱 Mi，依次往下排。C 大调的 C D E F 唱 Do Re Mi Fa；换到 D 大调，D E F♯ G 也唱 Do Re Mi Fa，因为它们都在扮演前四级。"
+      },
+      {
+        "title": "同一组声音，换一种叫法",
+        "text": "点 D 大调前四级，第一遍按固定唱名说 Re Mi 升Fa Sol，第二遍按首调唱名唱 Do Re Mi Fa。播放的音高完全相同，改变的是命名角度。再比较 C 大调前四级，听见整组抬高后，内部距离仍是全、全、半。"
+      }
+    ],
+    "mantra": "固定看音名，首调看角色；先说用哪套，再问谁是 Do。",
+    "boundary": "这里的首调示范限于大调。小调有不同唱名习惯，不能直接套用本篇所有说法。示例是音阶片段，不代表孤立几个音就能唯一确定调性。",
+    "examples": [
+      {
+        "label": "C 大调 · 前四级",
+        "notes": [
+          60,
+          62,
+          64,
+          65
+        ],
+        "spellings": [
+          "C4",
+          "D4",
+          "E4",
+          "F4"
+        ],
+        "caption": "固定唱名：Do Re Mi Fa；C 大调首调唱名：同样是 Do Re Mi Fa。"
+      },
+      {
+        "label": "D 大调 · 前四级",
+        "notes": [
+          62,
+          64,
+          66,
+          67
+        ],
+        "spellings": [
+          "D4",
+          "E4",
+          "F♯4",
+          "G4"
+        ],
+        "caption": "固定唱名：Re Mi 升Fa Sol；D 大调首调唱名：Do Re Mi Fa。内部距离仍为全、全、半。"
+      },
+      {
+        "label": "D 大调 · 1 3 5",
+        "notes": [
+          62,
+          66,
+          69
+        ],
+        "spellings": [
+          "D4",
+          "F♯4",
+          "A4"
+        ],
+        "caption": "按 D 大调首调唱 Do Mi Sol；按固定唱名说 Re 升Fa La。两种名字对应同一组声音。"
+      }
+    ],
+    "quiz": {
+      "question": "在 D 大调的首调唱名里，哪个音唱 Do？",
+      "answers": [
+        "C",
+        "D",
+        "F♯"
+      ],
+      "correct": 1,
+      "explanation": "大调首调唱名把主音唱作 Do，D 大调的主音是 D；固定唱名下 D 仍对应 Re。"
+    },
+    "training": "staff",
+    "trainingLabel": "去练谱面音名识别"
+  }
+}

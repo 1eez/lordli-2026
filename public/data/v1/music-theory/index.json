@@ -2,6 +2,76 @@
   "schemaVersion": 1,
   "items": [
     {
+      "id": "note-name-bridge",
+      "title": "CDEFGAB 和 Do Re Mi：给同一个音贴两张名牌",
+      "description": "先记 CDE＝Do Re Mi，再接 FG＝Fa Sol、AB＝La Si，边听边对上号。",
+      "locale": "zh",
+      "url": "/data/v1/music-theory/note-name-bridge.zh.json"
+    },
+    {
+      "id": "staff-lines",
+      "title": "五条线分两口记：Mi Sol Si，Re Fa",
+      "description": "高音谱表从下往上 E G B D F，用两组声音记住五条线。",
+      "locale": "zh",
+      "url": "/data/v1/music-theory/staff-lines.zh.json"
+    },
+    {
+      "id": "staff-spaces",
+      "title": "四个间记成 FACE：Fa La Do Mi",
+      "description": "F A C E 正好拼成一个英文单词，让四个空隙有自己的名字。",
+      "locale": "zh",
+      "url": "/data/v1/music-theory/staff-spaces.zh.json"
+    },
+    {
+      "id": "descending-reading",
+      "title": "别只会顺着背：把 Do Re Mi 倒过来",
+      "description": "从 C 往下是 B、A、G，倒读也能从身边的路标出发。",
+      "locale": "zh",
+      "url": "/data/v1/music-theory/descending-reading.zh.json"
+    },
+    {
+      "id": "half-whole-steps",
+      "title": "Mi–Fa、Si–Do：白键邻居不都隔一样远",
+      "description": "用 E–F、B–C 记住两个半音口，其他相邻自然音是全音。",
+      "locale": "zh",
+      "url": "/data/v1/music-theory/half-whole-steps.zh.json"
+    },
+    {
+      "id": "accidentals-first",
+      "title": "升号降号先别怕：位置认字母，符号改音高",
+      "description": "♯ 升半音，♭ 降半音；先认位置，再听改变了多少。",
+      "locale": "zh",
+      "url": "/data/v1/music-theory/accidentals-first.zh.json"
+    },
+    {
+      "id": "fixed-movable-do",
+      "title": "Do 不一定是 C：先问固定唱名，还是首调唱名",
+      "description": "同一段音用两种方法叫名字，就能理解为什么 D 也能唱 Do。",
+      "locale": "zh",
+      "url": "/data/v1/music-theory/fixed-movable-do.zh.json"
+    },
+    {
+      "id": "melody-contour",
+      "title": "三音听不住？先画上坡、下坡和小山",
+      "description": "先记旋律的走向，再补具体音名，把三音听写拆成两步。",
+      "locale": "zh",
+      "url": "/data/v1/music-theory/melody-contour.zh.json"
+    },
+    {
+      "id": "major-scale-recipe",
+      "title": "大调不靠全白键：记住全全半、全全全半",
+      "description": "用 C 大调做模板，再听 G 大调为什么需要 F♯。",
+      "locale": "zh",
+      "url": "/data/v1/music-theory/major-scale-recipe.zh.json"
+    },
+    {
+      "id": "c-pentatonic",
+      "title": "先用五个音搭小旋律：Do Re Mi Sol La",
+      "description": "暂时放下 Fa、Si，用 C 大调五声音阶练唱名和短句记忆。",
+      "locale": "zh",
+      "url": "/data/v1/music-theory/c-pentatonic.zh.json"
+    },
+    {
       "id": "staff-landmarks",
       "title": "五线谱别爬楼梯，先装几个路标",
       "description": "每次都从 Do 往上数，当然慢。试试就近认亲。",

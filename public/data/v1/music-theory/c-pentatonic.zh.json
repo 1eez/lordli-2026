@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "locale": "zh",
+  "article": {
+    "id": "c-pentatonic",
+    "tag": "入门",
+    "title": "先用五个音搭小旋律：Do Re Mi Sol La",
+    "description": "暂时放下 Fa、Si，用 C 大调五声音阶练唱名和短句记忆。",
+    "hook": "七个音一次记不住，不妨先缩小材料：只用 Do Re Mi Sol La，也能练出有起伏的短句。",
+    "sections": [
+      {
+        "title": "先认这五张名片",
+        "text": "本篇使用以 C 为主音的大调五声音阶：C D E G A，固定唱名 Do Re Mi Sol La。可以把它看成 C 大调七个音里暂时拿走 F、B 后留下的五个音。先点五音材料，一音一音对上名字。"
+      },
+      {
+        "title": "缺了两个音，距离就变了",
+        "text": "C→D、D→E 是全音，E→G 跨了 3 个半音，G→A 又是全音。别因为它们在这组材料里相邻，就都当作同样大小的一步。听下面的 E→G，留意它比 C→D 跳得远。"
+      },
+      {
+        "title": "五个材料，先拼三音小句",
+        "text": "先听 C D E，再听 E G A，分别记住前半组和后半组；最后听 A G E D C，尝试不看谱复唱。每组最多五音，先唱稳再追求快。记不住就拆成两三音重听，随后到单音听写中练参考音关系。"
+      }
+    ],
+    "mantra": "Do Re Mi，Sol La；少两个材料，先把短句记牢。",
+    "boundary": "本篇是以 C 为主音的大调五声音阶入门，不把所有五声音阶都概括成这一种。示例是原创音高短句，等间隔播放，不代表特定歌曲或固定节奏。",
+    "examples": [
+      {
+        "label": "五音材料",
+        "notes": [
+          60,
+          62,
+          64,
+          67,
+          69
+        ],
+        "spellings": [
+          "C4",
+          "D4",
+          "E4",
+          "G4",
+          "A4"
+        ],
+        "caption": "C D E G A：固定唱名 Do Re Mi Sol La；没有 F 和 B。"
+      },
+      {
+        "label": "短句一 · Do Re Mi",
+        "notes": [
+          60,
+          62,
+          64
+        ],
+        "spellings": [
+          "C4",
+          "D4",
+          "E4"
+        ],
+        "caption": "先只记三个相邻自然音：Do Re Mi。"
+      },
+      {
+        "label": "短句二 · Mi Sol La",
+        "notes": [
+          64,
+          67,
+          69
+        ],
+        "spellings": [
+          "E4",
+          "G4",
+          "A4"
+        ],
+        "caption": "Mi 到 Sol 跨 3 个半音，Sol 到 La 跨 2 个半音；两步不一样大。"
+      },
+      {
+        "label": "五音回落",
+        "notes": [
+          69,
+          67,
+          64,
+          62,
+          60
+        ],
+        "spellings": [
+          "A4",
+          "G4",
+          "E4",
+          "D4",
+          "C4"
+        ],
+        "caption": "La Sol Mi Re Do。先记方向连续向下，再核对中间跳过了 F。"
+      }
+    ],
+    "quiz": {
+      "question": "本篇 C 大调五声音阶使用哪五个音？",
+      "answers": [
+        "C D E F G",
+        "C D E G A",
+        "C E F A B"
+      ],
+      "correct": 1,
+      "explanation": "本篇取 C D E G A，对应 Do Re Mi Sol La；从 C 大调里暂时去掉 F、B。"
+    },
+    "training": "dictation-single",
+    "trainingLabel": "去练带参考音的单音听写"
+  }
+}

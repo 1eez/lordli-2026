@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "locale": "zh",
+  "article": {
+    "id": "staff-lines",
+    "tag": "识谱",
+    "title": "五条线分两口记：Mi Sol Si，Re Fa",
+    "description": "高音谱表从下往上 E G B D F，用两组声音记住五条线。",
+    "hook": "五条线的位置总是混在一起？先只看线上的音，把间里的音暂时留到下一课。",
+    "sections": [
+      {
+        "title": "从下面数，别从上面猜",
+        "text": "高音谱表的五条线从下往上，依次是第一线 E4、第二线 G4、第三线 B4、第四线 D5、第五线 F5。用固定唱名记，就是 Mi、Sol、Si、Re、Fa。先分成“Mi Sol Si”和“Re Fa”两口，再连成一串。"
+      },
+      {
+        "title": "把第三线当中间站",
+        "text": "第三线在五条线正中间，是 B4。它下面两条线是 E4、G4，上面两条线是 D5、F5。看新音时，先判断在第三线的上面还是下面，再找到具体哪条线。"
+      },
+      {
+        "title": "声音和位置来回对",
+        "text": "先点五条线，跟着高亮从下往上报名字；再点上下两组，练习不从第一线重新数。最后听倒读，尝试从第五线往下报 F、D、B、G、E。这里只听线上的跳进，音与音之间还隔着一个间。"
+      }
+    ],
+    "mantra": "线从下往上：E G B D F；固定唱名 Mi Sol Si Re Fa。",
+    "boundary": "这套口诀只用于高音谱表上没有升降变化的五条线。换谱号，位置与音名的对应会改变；线到线也不代表固定的半音数。",
+    "examples": [
+      {
+        "label": "五条线 · 上行",
+        "notes": [
+          64,
+          67,
+          71,
+          74,
+          77
+        ],
+        "spellings": [
+          "E4",
+          "G4",
+          "B4",
+          "D5",
+          "F5"
+        ],
+        "caption": "第一到第五线：E G B D F；固定唱名 Mi Sol Si Re Fa。"
+      },
+      {
+        "label": "下面三条线",
+        "notes": [
+          64,
+          67,
+          71
+        ],
+        "spellings": [
+          "E4",
+          "G4",
+          "B4"
+        ],
+        "caption": "第一线 E4、第二线 G4、第三线 B4：Mi Sol Si。"
+      },
+      {
+        "label": "上面两条线",
+        "notes": [
+          74,
+          77
+        ],
+        "spellings": [
+          "D5",
+          "F5"
+        ],
+        "caption": "第四线 D5、第五线 F5：Re Fa。"
+      },
+      {
+        "label": "五条线 · 倒读",
+        "notes": [
+          77,
+          74,
+          71,
+          67,
+          64
+        ],
+        "spellings": [
+          "F5",
+          "D5",
+          "B4",
+          "G4",
+          "E4"
+        ],
+        "caption": "从第五线回到第一线：F D B G E；Fa Re Si Sol Mi。"
+      }
+    ],
+    "quiz": {
+      "question": "高音谱表第三线，在没有升降变化时是什么音？",
+      "answers": [
+        "G4",
+        "B4",
+        "D5"
+      ],
+      "correct": 1,
+      "explanation": "从下往上五条线是 E4、G4、B4、D5、F5，正中间的第三线是 B4。"
+    },
+    "training": "staff",
+    "trainingLabel": "去练五线谱线上的音"
+  }
+}

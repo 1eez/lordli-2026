@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "locale": "zh",
+  "article": {
+    "id": "note-name-bridge",
+    "tag": "入门",
+    "title": "CDEFGAB 和 Do Re Mi：给同一个音贴两张名牌",
+    "description": "先记 CDE＝Do Re Mi，再接 FG＝Fa Sol、AB＝La Si，边听边对上号。",
+    "hook": "看到 C 认识字母，听到 Do 也会唱，放在一起却反应不过来？先把七个音拆成三小包。",
+    "sections": [
+      {
+        "title": "先把三小包接起来",
+        "text": "本篇先用固定唱名：C 对应 Do，D 对应 Re，E 对应 Mi；F 对应 Fa，G 对应 Sol；A 对应 La，B 对应 Si。记成“CDE／FG／AB”三小包，唱成“Do Re Mi／Fa Sol／La Si”。这里说的是音名和唱名，不是英语字母的读音。"
+      },
+      {
+        "title": "字母是一圈，不是一条直线",
+        "text": "字母顺序从 A 排也可以，从 C 排也可以。学 C 大调时常从 C 开始，所以是 C D E F G A B，之后回到更高的 C。B 后面是 C，不是 H；G 后面是 A。下面 C4、C5 的数字表示音区，C5 比 C4 高一个八度。"
+      },
+      {
+        "title": "一遍看字母，一遍说唱名",
+        "text": "依次点下面三小包。第一遍看着谱面报字母，第二遍按说明轻声跟唱唱名，第三遍先自己说出对应关系再播放核对。最后试听 B4→C5，专门练习字母绕回 C 的位置。钢琴只提供音高，不会替你念字母或唱词。"
+      }
+    ],
+    "mantra": "CDE 对 Do Re Mi，FG 对 Fa Sol，AB 对 La Si；B 后回 C。",
+    "boundary": "以上对应按固定唱名说明。首调唱名会随调的主音移动，不能把“C 永远是首调 Do”当规则。有些教材把 Si 写作 Ti。记住名字不等于能在没有参考音时认出音高。",
+    "examples": [
+      {
+        "label": "第一包 · CDE",
+        "notes": [
+          60,
+          62,
+          64
+        ],
+        "spellings": [
+          "C4",
+          "D4",
+          "E4"
+        ],
+        "caption": "C4–D4–E4：固定唱名 Do–Re–Mi。每个音响起时，对照谱下字母轻声跟唱。"
+      },
+      {
+        "label": "第二包 · FG",
+        "notes": [
+          65,
+          67
+        ],
+        "spellings": [
+          "F4",
+          "G4"
+        ],
+        "caption": "F4–G4：固定唱名 Fa–Sol。先说 F、G，再唱 Fa、Sol。"
+      },
+      {
+        "label": "第三包 · AB",
+        "notes": [
+          69,
+          71
+        ],
+        "spellings": [
+          "A4",
+          "B4"
+        ],
+        "caption": "A4–B4：固定唱名 La–Si。字母到 G 后已经绕回 A。"
+      },
+      {
+        "label": "接回高音 Do",
+        "notes": [
+          71,
+          72
+        ],
+        "spellings": [
+          "B4",
+          "C5"
+        ],
+        "caption": "B4–C5：固定唱名 Si–Do；C5 是高一个八度的 C。"
+      }
+    ],
+    "quiz": {
+      "question": "按固定唱名，G 对应哪个唱名？",
+      "answers": [
+        "Fa",
+        "Sol",
+        "La"
+      ],
+      "correct": 1,
+      "explanation": "C D E F G A B 对应 Do Re Mi Fa Sol La Si，所以 G 对应 Sol。"
+    },
+    "training": "staff",
+    "trainingLabel": "去练音名与谱面对应"
+  }
+}

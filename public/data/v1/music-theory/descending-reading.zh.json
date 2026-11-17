@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "locale": "zh",
+  "article": {
+    "id": "descending-reading",
+    "tag": "识谱",
+    "title": "别只会顺着背：把 Do Re Mi 倒过来",
+    "description": "从 C 往下是 B、A、G，倒读也能从身边的路标出发。",
+    "hook": "上行能认，下行却要先在脑子里唱完一遍上行？你需要练的是反方向的字母接龙。",
+    "sections": [
+      {
+        "title": "把圆环反着走",
+        "text": "上行音名字母是 C D E F G A B，再回到 C；下行就反过来：C B A G F E D，再回到 C。高音谱表从一个线或间走到紧挨着的下方位置，就退一个字母。"
+      },
+      {
+        "title": "每次只练三四个音",
+        "text": "先听 C5→B4→A4→G4，固定唱名是 Do Si La Sol；再听 G4→F4→E4→D4，是 Sol Fa Mi Re。每组先报字母，再跟唱，熟了再把两组接起来。不要为了找 B 又从 C4 往上数一大圈。"
+      },
+      {
+        "title": "跳过一个位置，字母也跳过一个",
+        "text": "再比较 E4→D4→C4 与 E4→C4。前者逐个向下，后者跳过 D。看谱先分清是相邻位置，还是隔了一个位置，再决定退一个还是两个字母。"
+      }
+    ],
+    "mantra": "上去 C D E，下去 E D C；过 C 向下先到 B。",
+    "boundary": "这里用无升降号的高音谱表示范。字母相邻不代表半音距离总相等；倒读帮助识谱，听音距离还要另练。",
+    "examples": [
+      {
+        "label": "高处往下",
+        "notes": [
+          72,
+          71,
+          69,
+          67
+        ],
+        "spellings": [
+          "C5",
+          "B4",
+          "A4",
+          "G4"
+        ],
+        "caption": "固定唱名 Do Si La Sol；音名 C B A G。注意跨过 C 往下是 B。"
+      },
+      {
+        "label": "接着往下",
+        "notes": [
+          67,
+          65,
+          64,
+          62
+        ],
+        "spellings": [
+          "G4",
+          "F4",
+          "E4",
+          "D4"
+        ],
+        "caption": "固定唱名 Sol Fa Mi Re；音名 G F E D。"
+      },
+      {
+        "label": "一步一步下行",
+        "notes": [
+          64,
+          62,
+          60
+        ],
+        "spellings": [
+          "E4",
+          "D4",
+          "C4"
+        ],
+        "caption": "Mi Re Do；谱面相邻位置依次向下。"
+      },
+      {
+        "label": "跳过 Re",
+        "notes": [
+          64,
+          60
+        ],
+        "spellings": [
+          "E4",
+          "C4"
+        ],
+        "caption": "Mi Do；从 E 到 C 跳过字母 D，谱面也跳过中间的位置。"
+      }
+    ],
+    "quiz": {
+      "question": "从 C5 沿自然音向下走一个相邻谱位，是什么？",
+      "answers": [
+        "D5",
+        "B4",
+        "A4"
+      ],
+      "correct": 1,
+      "explanation": "字母圈反向走，C 的前一个是 B。C5 下方相邻的自然音是 B4。"
+    },
+    "training": "staff",
+    "trainingLabel": "去练上下行识谱"
+  }
+}

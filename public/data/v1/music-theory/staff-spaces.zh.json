@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "locale": "zh",
+  "article": {
+    "id": "staff-spaces",
+    "tag": "识谱",
+    "title": "四个间记成 FACE：Fa La Do Mi",
+    "description": "F A C E 正好拼成一个英文单词，让四个空隙有自己的名字。",
+    "hook": "线上的音勉强认得，落到两线之间就卡住？四个间其实可以单独记成一组。",
+    "sections": [
+      {
+        "title": "把四个间当作另一排座位",
+        "text": "高音谱表两条相邻线之间的空隙叫“间”。从下往上，第一间 F4、第二间 A4、第三间 C5、第四间 E5，字母连起来是 FACE，正好是英文“脸”。固定唱名是 Fa、La、Do、Mi。"
+      },
+      {
+        "title": "先认在线上，还是在间里",
+        "text": "看音符头：中间穿过一条线的是线上的音，落在两条线之间的是间里的音。先判断线或间，再调出对应口诀。比如第二间是 A4，往上走到第三线才是 B4，再往上到第三间是 C5。"
+      },
+      {
+        "title": "从 FACE 走回邻居",
+        "text": "先听四个间，再分别听下半组和上半组。最后听 A4→B4→C5：第二间、第三线、第三间。嘴里报 A、B、C，眼睛看音符头如何从间走到线、再走到间。"
+      }
+    ],
+    "mantra": "四间从下往上 F A C E；固定唱名 Fa La Do Mi。",
+    "boundary": "FACE 指高音谱表内部的四个间，不包括谱表上方、下方的空隙；第三间是 C5，下加一线的中央 C 是 C4，两者相差一个八度。",
+    "examples": [
+      {
+        "label": "四个间 · FACE",
+        "notes": [
+          65,
+          69,
+          72,
+          76
+        ],
+        "spellings": [
+          "F4",
+          "A4",
+          "C5",
+          "E5"
+        ],
+        "caption": "第一到第四间：F4 A4 C5 E5；Fa La Do Mi。"
+      },
+      {
+        "label": "下面两个间",
+        "notes": [
+          65,
+          69
+        ],
+        "spellings": [
+          "F4",
+          "A4"
+        ],
+        "caption": "第一间 F4、第二间 A4：Fa La。"
+      },
+      {
+        "label": "上面两个间",
+        "notes": [
+          72,
+          76
+        ],
+        "spellings": [
+          "C5",
+          "E5"
+        ],
+        "caption": "第三间 C5、第四间 E5：Do Mi，都是较高音区。"
+      },
+      {
+        "label": "间 → 线 → 间",
+        "notes": [
+          69,
+          71,
+          72
+        ],
+        "spellings": [
+          "A4",
+          "B4",
+          "C5"
+        ],
+        "caption": "第二间 A4 → 第三线 B4 → 第三间 C5。三个位置相邻。"
+      }
+    ],
+    "quiz": {
+      "question": "高音谱表第三间是什么音？",
+      "answers": [
+        "C4",
+        "C5",
+        "B4"
+      ],
+      "correct": 1,
+      "explanation": "四个间从下往上是 F4 A4 C5 E5。第三间是 C5；C4 在下加一线上。"
+    },
+    "training": "staff",
+    "trainingLabel": "去练五线谱间里的音"
+  }
+}
